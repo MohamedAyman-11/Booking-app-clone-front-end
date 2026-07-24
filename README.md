@@ -29,25 +29,6 @@ This frontend delivers a polished booking experience for browsing properties, vi
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-
-| Section          | Preview                                                                                     |
-| ---------------- | ------------------------------------------------------------------------------------------- |
-| Home Page        | <img src="https://placehold.co/1200x700/0057b8/ffffff?text=Home+Page" width="320" />        |
-| Property Details | <img src="https://placehold.co/1200x700/1f2937/ffffff?text=Property+Details" width="320" /> |
-| Search Page      | <img src="https://placehold.co/1200x700/7c3aed/ffffff?text=Search+Page" width="320" />      |
-| Authentication   | <img src="https://placehold.co/1200x700/0f766e/ffffff?text=Authentication" width="320" />   |
-| Dashboard        | <img src="https://placehold.co/1200x700/ea580c/ffffff?text=Dashboard" width="320" />        |
-| Booking Page     | <img src="https://placehold.co/1200x700/ca8a04/ffffff?text=Booking+Flow" width="320" />     |
-| Profile          | <img src="https://placehold.co/1200x700/2563eb/ffffff?text=Profile" width="320" />          |
-| Mobile View      | <img src="https://placehold.co/800x1400/111827/ffffff?text=Mobile+View" width="220" />      |
-
-</div>
-
----
-
 ## ✨ Features
 
 ### 🔐 Authentication
