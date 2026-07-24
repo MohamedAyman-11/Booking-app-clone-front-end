@@ -1,0 +1,15 @@
+export const QUERY_KEYS = {
+  globalProperties: ["properties"],
+  currentUser: ["currentUser"],
+  savedProperties: ["savedProperties"],
+  adminProperties: ["adminProperties"],
+  adminStats: ["adminStats"],
+  property: ["property"],
+  myProperties: ["myProperties"],
+  adminUsers: ["adminUsers"],
+  propertiesRequest: ["propertiesRequest"],
+  userReviews: ["userReviews"],
+  hostReviews: ["hostReviews"],
+  adminReviews: ["reviews"],
+  bookings: ["bookings"],
+} as const;

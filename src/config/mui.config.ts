@@ -1,4 +1,4 @@
-import { createTheme } from '@mui/material';
+import {createTheme} from '@mui/material';
 
 const theme = createTheme({
   palette: {
@@ -24,6 +24,28 @@ const theme = createTheme({
     button: {
       fontWeight: 600,
       textTransform: 'none',
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 576,
+      md: 768,
+      lg: 992,
+      xl: 1200,
+      xxl: 1400,
+      bigXl: 1600
+    },
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: ({theme}) => ({
+          "&.Mui-disabled": {
+            backgroundColor: theme.palette.primary.light,
+          },
+        }),
+      },
     },
   },
 });

@@ -1,10 +1,21 @@
-import {Box} from "@mui/material";
+import {Box, Container} from "@mui/material";
 import Hero from "../components/layout/Hero.tsx";
+import PropertyList from "../components/home/PropertyList.tsx";
+import type {User} from "../interfaces";
 
-const Home = () => {
+interface Props {
+  user: User
+}
+
+const Home = ({user}: Props) => {
   return (
     <Box>
-    <Hero/>
+      <Hero user={user}/>
+      <Box sx={{py: '30px'}}>
+        <Container maxWidth={'xl'}>
+          <PropertyList/>
+        </Container>
+      </Box>
     </Box>
   );
 };

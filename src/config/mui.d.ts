@@ -1,4 +1,5 @@
 import '@mui/material/styles';
+import "@mui/material/styles";
 
 declare module '@mui/material/styles' {
   interface Palette {
@@ -19,5 +20,17 @@ declare module '@mui/material/styles' {
 declare module '@mui/material/Button' {
   interface ButtonPropsColorOverrides {
     brand: true;
+  }
+}
+
+declare module "@mui/material/styles" {
+  interface BreakpointOverrides {
+    xs: true;
+    sm: true;
+    md: true;
+    lg: true;
+    xl: true;
+    xxl: true;
+    bigXl: true
   }
 }

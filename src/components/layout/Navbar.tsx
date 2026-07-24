@@ -1,49 +1,43 @@
-import {Box, Button, Container, Stack} from '@mui/material';
+import {Box, Stack} from '@mui/material';
 import Logo from '../../svg/Logo';
-import {Link, useLocation} from 'react-router-dom';
-import NotLoggedIn from './NotLoggedIn';
-import LoggedIn from './LoggedIn';
+import {Link} from 'react-router-dom';
+import AuthButtons from './AuthButtons.tsx';
+import type {User} from "../../interfaces";
+import DropDownMenu from "./DropDownMenu.tsx";
+import HostActions from "./HostActions.tsx";
+import BecomeHostButton from "./BecomeHostButton.tsx";
 
-const Navbar = () => {
-  const {pathname} = useLocation();
-  const user = '';
+interface Props {
+  user: User
+}
+
+const Navbar = ({user}: Props) => {
+
   return (
-    <Container maxWidth={'lg'}>
+    <Stack
+      direction={'row'}
+      sx={{
+        alignItems: 'center',
+        padding: '10px 0',
+        justifyContent: 'space-between',
+        flex: 1
+      }}
+    >
+      {/*LOGO*/}
+      <Box sx={{flex: 1, display: 'flex'}} component={Link} to={'/'}>
+        <Logo color={"#fff"}/>
+      </Box>
       <Stack
+        component={'nav'}
+        sx={{alignItems: 'center', gap: '20px'}}
         direction={'row'}
-        sx={{
-          alignItems: 'center',
-          padding: '10px 0',
-        }}
       >
-        <Box sx={{flex: 1}} component={Link} to={pathname}>
-          <Logo color={"#fff"}/>
-        </Box>
-        <Stack
-          component={'nav'}
-          sx={{alignItems: 'center', gap: '30px'}}
-          direction={'row'}
-        >
-          <Button
-            sx={{
-              color: '#fff',
-              padding: '8px 12px',
-              fontSize: {
-                xs: '14px',
-                md: '16px'
-              },
-              transition: 'all 0.3s ease',
-              '&:hover': {
-                background: '#ffffff21',
-              },
-            }}
-          >
-            List your property
-          </Button>
-          {!user ? <NotLoggedIn/> : <LoggedIn/>}
-        </Stack>
+        {/*Create Property Button*/}
+        {user && user?.role && user?.role === 'host' ? <HostActions/> : user?.role && user?.role !== 'admin' ?
+          <BecomeHostButton/> : null}
+        {!user ? <AuthButtons/> : <DropDownMenu/>}
       </Stack>
-    </Container>
+    </Stack>
   );
 };
 

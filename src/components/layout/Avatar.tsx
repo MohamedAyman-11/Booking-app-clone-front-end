@@ -1,26 +1,74 @@
 import Avatar from '@mui/material/Avatar';
+import {stringAvatar} from "../../utils/functions.ts";
 
-// function stringAvatar(name: string) {
-//   return {
-//     sx: {
-//       bgcolor: stringToColor(name),
-//     },
-//     children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
-//   };
-// }
+interface Props {
+  user?: {
+    _id: string,
+    name: string,
+    email: string,
+    photo: {
+      url: string
+    }
+  }
+}
 
-const UserAvatar = () => {
-  const user = true;
-  return <Avatar src={`${user?`/public/photo_2026-03-07_02-44-48.jpg`:`/public/default.png`}`} sx={{
-    width:{
-      xs:'32px',
-      sm:'40px'
-    },
-    height:{
-      xs:'32px',
-      sm:'40px'
-    },
-  }} />;
+
+const UserAvatar = ({user}: Props) => {
+
+  if (!user) {
+    return (
+      <Avatar
+        alt={'Default Image'}
+        src="/default.png"
+        sx={{
+          width: {
+            xs: '32px',
+            sm: '40px',
+          },
+          height: {
+            xs: '32px',
+            sm: '40px',
+          },
+        }}
+      />
+    );
+  }
+  const avatarProps = stringAvatar(user.name);
+  if (!user?.photo?.url) {
+    return (
+      <Avatar
+        {...avatarProps}
+        sx={{
+          ...avatarProps.sx,
+          width: {
+            xs: '32px',
+            sm: '40px',
+          },
+          height: {
+            xs: '32px',
+            sm: '40px',
+          },
+        }}
+      >{avatarProps.children}</Avatar>
+    );
+  }
+  return (
+    <Avatar
+      alt={'User Photo'}
+      src={user?.photo?.url}
+      sx={{
+        width: {
+          xs: '32px',
+          sm: '40px',
+        },
+        height: {
+          xs: '32px',
+          sm: '40px',
+        },
+      }}
+    />
+  )
+
 };
 
 export default UserAvatar;

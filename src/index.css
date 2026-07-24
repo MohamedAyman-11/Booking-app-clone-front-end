@@ -3,16 +3,58 @@
   margin: 0;
   box-sizing: border-box;
 }
+
 .menu-icon {
   width: 16px;
   height: 16px;
   margin-right: 10px;
 }
-.brand-logo{
+
+.brand-logo {
   width: 144px;
 }
+
 @media (max-width: 767px) {
-  .brand-logo{
+  .brand-logo {
     width: 120px;
   }
+}
+
+.text-area {
+  width: 100%;
+  resize: none;
+  border-color: rgba(0, 0, 0, 0.23);
+  border-radius: 4px;
+  padding: 10px 14px;
+}
+
+.text-area:focus {
+  border-color: #1976d2;
+  outline-color: #1976d2;
+}
+
+.property-swiper {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.property-swiper img {
+  width: 100%;
+  height: 100%;
+}
+
+.property-swiper .swiper-pagination-bullet {
+  background: #fff;
+  opacity: .6;
+}
+
+.property-swiper .swiper-pagination-bullet-active {
+  background: #1976d2;
+  opacity: 1;
+}
+
+.mySwiperThumb .swiper-slide-active {
+  border: 2px solid red;
 }

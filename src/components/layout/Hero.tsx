@@ -1,36 +1,41 @@
-import { Box, Container, Typography } from '@mui/material';
+import {Box, Container, Typography} from '@mui/material';
+import type {User} from "../../interfaces";
 
-const Hero = () => {
-  const user = '';
+interface Props {
+  user: User
+}
+
+const Hero = ({user}: Props) => {
+  const name = user?.name ?? 'Guest'
   return (
     <Box
-      sx={(theme)=>({
-        py: '80px',
-        background:theme.palette.brand.primary
+      sx={(theme) => ({
+        py: '40px',
+        background: theme.palette.brand.primary
       })}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth={'xl'}>
         {user ? (
           <Box>
             <Typography
               component={'h3'}
               sx={{
                 fontSize: {
-                  xs:'34px',
-                  md:'48px'
+                  xs: '34px',
+                  md: '48px'
                 },
                 color: '#fff',
                 fontWeight: 'bold',
               }}
             >
-              Where to next, {'Mohamed'}?
+              Where to next, {name}?
             </Typography>
             <Typography
               component={'p'}
               sx={{
                 fontSize: {
-                  xs:'16px',
-                  md:'24px'
+                  xs: '16px',
+                  md: '24px'
                 },
                 my: '5px',
                 color: '#fff',
@@ -45,8 +50,8 @@ const Hero = () => {
               component={'h3'}
               sx={{
                 fontSize: {
-                  xs:'34px',
-                  md:'48px'
+                  xs: '34px',
+                  md: '48px'
                 },
                 color: '#fff',
                 fontWeight: 'bold',
@@ -58,8 +63,8 @@ const Hero = () => {
               component={'p'}
               sx={{
                 fontSize: {
-                  xs:'16px',
-                  md:'24px'
+                  xs: '16px',
+                  md: '24px'
                 },
                 my: '5px',
                 color: '#fff',

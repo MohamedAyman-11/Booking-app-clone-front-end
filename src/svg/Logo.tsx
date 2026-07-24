@@ -1,8 +1,8 @@
-interface IProps {
+interface Props {
   color: string
 }
 
-const Logo = ({color}: IProps) => {
+const Logo = ({color}: Props) => {
   return (
     <svg
       className={'brand-logo'}

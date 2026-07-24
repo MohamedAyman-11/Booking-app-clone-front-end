@@ -1,11 +1,15 @@
-import {Outlet} from 'react-router-dom';
-import Navbar from '../components/layout/Navbar';
-import {Box, useMediaQuery} from '@mui/material';
+import {Box, Container, useMediaQuery} from '@mui/material';
+import type {User} from "../interfaces";
+import CustomToaster from "../components/ui/CustomToaster.tsx";
+import {Outlet} from "react-router-dom";
 import MobileNavbar from "../components/layout/mobile/MobileNavbar.tsx";
-import {Toaster} from "react-hot-toast";
-import theme from "../config/mui.config.ts";
+import Navbar from "../components/layout/Navbar.tsx";
 
-const Layout = () => {
+interface Props {
+  user: User
+}
+
+const MainLayout = ({user}: Props) => {
   const isMobile = useMediaQuery('(max-width: 667px)');
   return (
     <>
@@ -15,27 +19,16 @@ const Layout = () => {
           background: theme.palette.brand.primary,
         })}
       >
-        {isMobile ? <MobileNavbar/> : <Navbar/>}
+        <Container maxWidth={'xl'}>
+
+          {isMobile ? <MobileNavbar user={user}/> : <Navbar user={user}/>}
+        </Container>
       </Box>
       <main>
         <Outlet/>
       </main>
-      <Toaster
-        position="top-center"
-        reverseOrder={false}
-        toastOptions={
-          {
-            style: {
-              fontFamily: theme.typography.fontFamily,
-              fontWeight: 500,
-              minWidth: '250px',
-              maxWidth: '440px',
-              whiteSpace: 'nowrap',
-            }
-          }
-        }
-      />
+      <CustomToaster/>
     </>
   );
 };
-export default Layout;
+export default MainLayout;
