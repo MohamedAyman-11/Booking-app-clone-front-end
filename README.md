@@ -139,15 +139,15 @@ npm run preview
 5. Create a booking reservation for a property.
 6. Use the dashboard to manage your profile, bookings, reviews, and property-related actions depending on your role.
 
-## 🤝 Contributing
+---
 
-Contributions are welcome. If you would like to improve the project:
+## 👤 Author
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Open a pull request with a clear description
+|              | Details                                                        |
+| ------------ | -------------------------------------------------------------- |
+| **Name**     | Mohamed Ayman                                                  |
+| **GitHub**   | [MohamedAyman-11](https://github.com/MohamedAyman-11)          |
+| **LinkedIn** | [Mohamed Ayman](https://www.linkedin.com/in/mohamedayman-dev/) |
+| **Email**    | master.mohamed.ayman@gmail.com                                 |
 
-## 📬 Contact
-
-If you would like to connect or discuss the project, feel free to reach out through the repository contact details or via your preferred professional channel.
+---
