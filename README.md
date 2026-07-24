@@ -46,14 +46,6 @@ This project is a modern web application for browsing and booking properties. It
 - Modern component-based interface using Material UI
 - Toast notifications and loading states for a smoother experience
 
-## 📸 Screenshots / Demo
-
-> Add screenshots in the project docs or assets folder and replace the placeholder paths below.
-
-- Homepage: docs/screenshots/home.png
-- Property Details: docs/screenshots/property-details.png
-- Dashboard: docs/screenshots/dashboard.png
-
 ## 🛠️ Tech Stack
 
 - React 19
