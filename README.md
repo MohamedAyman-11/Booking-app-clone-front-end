@@ -1,10 +1,6 @@
 # Full-Stack Booking App Frontend
 
 <div align="center">
-  <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1400&q=80" alt="Modern booking app banner" width="100%" />
-</div>
-
-<div align="center">
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react" alt="React" />
   <img src="https://img.shields.io/badge/TypeScript-6-3178C6?style=for-the-badge&logo=typescript" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite" alt="Vite" />
@@ -21,13 +17,6 @@ This frontend delivers a polished booking experience for browsing properties, vi
 
 ---
 
-## 🚀 Live Demo
-
-- Frontend Live Demo: https://your-demo-url.example
-- Backend API: https://your-api-url.example
-- API Documentation: https://your-api-docs.example
-
----
 
 ## ✨ Features
 
@@ -161,36 +150,6 @@ This frontend delivers a polished booking experience for browsing properties, vi
 
 ---
 
-## ⚙️ Installation
-
-```bash
-git clone <repository-url>
-cd full-stack-booking-app-clone-fornt-end
-npm install
-npm run dev
-```
-
----
-
-## 🔑 Environment Variables
-
-| Variable              | Required | Description                      |
-| --------------------- | -------: | -------------------------------- |
-| VITE_API_URL          |      Yes | Base URL for the backend API     |
-| VITE_GOOGLE_CLIENT_ID |      Yes | Google OAuth client ID for login |
-
----
-
-## ▶️ Available Scripts
-
-| Script          | Purpose                              |
-| --------------- | ------------------------------------ |
-| npm run dev     | Start the Vite development server    |
-| npm run build   | Create a production build            |
-| npm run preview | Preview the production build locally |
-| npm run lint    | Run ESLint across the project        |
-
----
 
 ## 🧭 Pages
 
@@ -223,21 +182,6 @@ npm run dev
 
 ---
 
-## 🧩 Components
-
-| Component              | Purpose                                        |
-| ---------------------- | ---------------------------------------------- |
-| Hero                   | Welcome section on the home page               |
-| Navbar / MobileNavbar  | Main navigation                                |
-| PropertyCard           | Property listing card                          |
-| PropertyDetailsContent | Full property detail experience                |
-| Booking                | Reservation widget with date picker and guests |
-| AddPropertyForm        | Host property creation form                    |
-| ResponsiveAppBar       | Dashboard shell navigation                     |
-| CustomToaster          | Global toast notifications                     |
-| ReviewsCard            | Review presentation UI                         |
-
----
 
 ## 🏗️ Project Architecture
 
@@ -313,21 +257,24 @@ Potential next steps for the project:
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome. Please open an issue or submit a pull request with a clear explanation of your changes.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License.
-
----
-
 ## 👤 Author
 
-- GitHub: https://github.com/your-username
-- LinkedIn: https://linkedin.com/in/your-username
-- Email: your.email@example.com
-- Portfolio: https://your-portfolio.example
+<p align="center">
+  
+<a href="https://wa.me/201030781453">
+<img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white"/>
+</a>&nbsp;&nbsp;
+
+<a href="https://www.facebook.com/mohamedayman.tech/">
+<img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white"/>
+</a>&nbsp;&nbsp;
+
+<a href="https://linkedin.com/in/mohamedayman-dev">
+<img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin-in&logoColor=white"/>
+</a>&nbsp;&nbsp;
+
+<a href="mailto:master.mohamed.ayman@email.com">
+<img src="https://img.shields.io/badge/Gmail-EA4335?style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
+
+</p>
